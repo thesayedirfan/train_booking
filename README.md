@@ -19,9 +19,12 @@ It provides APIs for  purchase for a ticket, seat allocation, shows the details 
     cd train_booking
     ```
 3. Start The Project
+
     - start the server
+
     ```bash
     make start_server
+
     ```
     - start the client
     ```bash
