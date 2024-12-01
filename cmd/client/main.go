@@ -81,7 +81,7 @@ func main() {
 	})
 
 	if err != nil {
-		log.Fatalf("Error purchasing ticket: %v", err)
+		log.Fatalf("Error getting ticket: %v", err)
 	}
 
 	 fmt.Println(ticketDetails1)
@@ -104,28 +104,24 @@ func main() {
 	})
 
 	if err != nil {
-		log.Fatalf("Error purchasing ticket: %v", err)
+		log.Fatalf("Error viewing ticket: %v", err)
 	}
 
-	fmt.Println("============================")
+
 
 	fmt.Println(sectionA)
-
-	fmt.Println("============================")
 
 	sectionB , err := client.ViewSectionUsers(ctx,&pb.SectionRequest{
 		Section: "B",
 	})
 
 	if err != nil {
-		log.Fatalf("Error purchasing ticket: %v", err)
+		log.Fatalf("Error viewing ticket: %v", err)
 	}
-
-	fmt.Println("============================")
 
 	fmt.Println(sectionB)
 
-	fmt.Println("============================")
+
 	
 
 

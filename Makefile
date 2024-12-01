@@ -3,8 +3,8 @@ gen:
     --go-grpc_out=. --go-grpc_opt=paths=source_relative \
     proto/ticketservice.proto
 	
-server:
+start_server:
 	go run cmd/server/main.go
 
-client:
+start_client:
 	go run cmd/client/main.go
