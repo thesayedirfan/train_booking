@@ -32,6 +32,47 @@ It provides APIs for  purchase for a ticket, seat allocation, shows the details 
     go test ./...
     ```
 
+## Project Structure
+
+```bash
+├── Makefile
+├── README.md
+├── cmd
+│   ├── client
+│   │   └── main.go
+│   └── server
+│       └── main.go
+├── go.mod
+├── go.sum
+├── handler
+│   └── grpc.go
+├── internal
+│   ├── allocators
+│   │   ├── first_available.go
+│   │   └── first_available_test.go
+│   ├── entity
+│   │   ├── allocator.go
+│   │   ├── ticket.go
+│   │   ├── train.go
+│   │   └── user.go
+│   ├── errors
+│   │   └── errors.go
+│   ├── repository
+│   │   ├── ticket_repository.go
+│   │   └── ticket_repository_test.go
+│   └── service
+│       └── ticket_service.go
+├── pkg
+│   └── uuid
+│       └── generator.go
+└── proto
+    ├── ticketservice.pb.go
+    ├── ticketservice.proto
+    └── ticketservice_grpc.pb.go
+
+```
+
+
 ## gRPC API Usage
 
 ### Available API Calls
